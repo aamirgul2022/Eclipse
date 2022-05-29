@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse Solar</title>
+    <link rel="icon" href="img/favicon.png">
+</head>
+<style>
+    #header {
+        background-color: #fcd25b;
+        position: relative;
+        top: -41px;
+        left: -41px;
+        /* width: 155%; */
+        /* min-width: 88%; */
+        display: flex;
+        justify-content: center;
+        width: 105%;
+        text-transform: uppercase;
+        padding-top: 9px;
+    }
+    
+    @media(max-width:990px) {
+        #header {
+            padding-top: 50px;
+            width: 112%;
+        }
+    }
+    
+    .container-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .container-header img {
+        height: 20vh;
+        padding-right: 60rem;
+    }
+    
+    @media (max-width:990px) {
+        .container-header img {
+            display: contents;
+            /* padding-right: 60rem; */
+        }
+    }
+    /* h1 {
+        color: #9effdf !important;
+        font-size: 50px;
+        padding-left: 44rem;
+    } */
+    
+    body {
+        background-color: #fff;
+        animation: dayToNight 10s infinite 1.5s;
+    }
+    
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+    }
+    
+    .sun {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: #fcd25b;
+        border: 3px solid #fcd25b;
+    }
+    
+    .shadow {
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        background-color: white;
+        top: -5px;
+        left: 0px;
+        animation: moveshadow 10s infinite 1.5s;
+    }
+    
+    @keyframes moveshadow {
+        0% {
+            transform: translateX(150px);
+            background-color: #fff;
+        }
+        50% {
+            transform: translateX(-10px);
+            background-color: #000;
+        }
+        100% {
+            transform: translateX(-170px);
+            background-color: #fff;
+        }
+    }
+    
+    @keyframes dayToNight {
+        0% {
+            background-color: #fff;
+        }
+        50% {
+            background-color: #000;
+        }
+        100% {
+            background-color: #fff;
+        }
+    }
+</style>
+
+<body>
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container-header">
+            <img src="img/logo-removebg-preview.png" alt="">
+            <h1 style="color: #ff6600;">Solor Eclipse</h1>
+    </header>
+    <div class="content">
+        <div class="sun">
+            <div class="shadow"></div>
+        </div>
+    </div>
+</body>
+
+</html>
